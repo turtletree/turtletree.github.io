@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>project on Vickie Liu</title><link>https://turtletree.github.io/tags/project/</link><description>Recent content in project on Vickie Liu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://turtletree.github.io/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>Build personal website</title><link>https://turtletree.github.io/pages/build-personal-website/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/build-personal-website/</guid><description>Action Items Quick steps to publish #logseq pages
-TODO Clone logseq-schrodinger-template and put it under main domain turtletree.github.io
-TODO Replace content with my own exported, unzipped content
-TODO Update config.yml with personal info
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>project on Vickie Liu</title><link>https://turtletree.github.io/tags/project/</link><description>Recent content in project on Vickie Liu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://turtletree.github.io/tags/project/index.xml" rel="self" type="application/rss+xml"/><item><title>Build personal website</title><link>https://turtletree.github.io/pages/build-personal-website/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/build-personal-website/</guid><description>Use Hugo Quick steps to publish #logseq pages
 More features
-TODO Add logseq-publish Action for automated CI
-TODO Add Graph in main menu, reference the example of brian sunter
-TODO Add multi language selector
-TODO Able to switch themes
-Other actions
-Document what exactly I did</description></item></channel></rss>
+Check all Logseq Format make sure it works Other actions
+Document what exactly I did
+Send PR for README to above resources
+Use Logseq</description></item></channel></rss>
