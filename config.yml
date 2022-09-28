@@ -1,56 +1,48 @@
 baseURL: https://turtletree.github.io
 languageCode: en-us
-title: Vickie L.
+title: Vickie Liu
 theme: "PaperMod"
 
 params:
-  homeInfoParams:
-    Title: I made it live 😎
-    Content: This is my personal website with no content 🙃
+    homeInfoParams:
+        Title: I made it live 😎
+        Content: This is my personal website with not much in it 🙃
 
-  socialIcons: # optional
-    - name: "github"
-      url: "https://github.com/turtletree"
-    # - name: "youtube"
-    #   url: "https://www.youtube.com/channel/XXX"
-    # - name: "twitter"
-    #   url: "https://twitter.com/XXX"
-    # - name: "kofi"
-    #   url: "https://buymeacoffee.com/XXX"
-    # - name: "rss"
-    #   url: "https://XXX.github.io/index.xml"
-  ShowReadingTime: true
-  author: "Vickie L."
-  contact: "vickie@example.com"
-  feedlinks: true
-  copyright: "<!--Creative Commons License-->This site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).<!--/Creative Commons License-->"
-  mobileMenu: true
+    socialIcons: # optional
+        - name: "github"
+          url: "https://github.com/turtletree"
+        - name: "youtube"
+          url: "https://www.youtube.com/"
+        - name: "instagram"
+          url: "https://www.instagram.com/vickieonthetree"
+        #- name: "twitter"
+         # url: "https://twitter.com/aryansawhney17"
+        #- name: "kofi" 
+         # url: "https://buymeacoffee.com/sawhney17"
+    ShowReadingTime: true
+    author: "Vickie Liu"
 
 outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # is necessary
-  section:
-    - HTML
-    - RSS
-    - JSON
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
 
 menu:
-  main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 20
-    - identifier: archive
-      name: Archive
-      url: /archives/
-      weight: 20
+    main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 20
+        - identifier: archive
+          name: Archive
+          url: /archives/
+          weight: 20

@@ -12,7 +12,7 @@ lastMod: 2022-09-27
 2. [OPTIONAL] With #backup app, "options -> photo albums -> tick only the new tmp album -> do "Backup Again" so a new folder with those photos will appear
 4. Go to [[Synology Photos]] (PB-XS/year/month), scroll to the bottom and fix wrong date time
 5. Delete unnecessary photos on web
-6. Mark with tag #screenshots #favorites #notes panaroma  
+6. Mark with tag #screenshots #favorites #notes panaroma, food  
 7. Go though iPhone, mark favorites similar to above, delete everything else (or some favorite), keep less than 30 photos per month
 
 Read some article about the 5GB iCloud storage can hold about 800-3500 photos, after some simple calculation, I should target to only save **20 per month**
@@ -26,7 +26,7 @@ Up to 2022-09-19 on iPhone, total 40805 photos and 416 videos. This is after cle
 {{query (property number-of-photos)}}
 query-table:: true
 query-sort-by:: when
-query-sort-desc:: false
+query-sort-desc:: true
 query-properties:: [:when :number-of-photos :final-number-of-photos :photos-on-iphone :time-to-process :places :tags]
 
 Sum of all remaining photos on iPhone: {{function (sum :photos-on-iphone)}}
