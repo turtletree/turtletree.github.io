@@ -8,7 +8,7 @@ lastMod: 2022-09-27
 ---
 ### Deletion by the month steps:
 
-1. Put all photos from that month to a tmp album on iPhone for ease of checking
+  + 1. Put all photos from that month to a tmp album on iPhone for ease of checking
 2. [OPTIONAL] With #backup app, "options -> photo albums -> tick only the new tmp album -> do "Backup Again" so a new folder with those photos will appear
 4. Go to [[Synology Photos]] (PB-XS/year/month), scroll to the bottom and fix wrong date time
 5. Delete unnecessary photos on web
@@ -29,6 +29,6 @@ query-sort-by:: when
 query-sort-desc:: true
 query-properties:: [:when :number-of-photos :final-number-of-photos :photos-on-iphone :time-to-process :places :tags]
 
-Sum of all remaining photos on iPhone: {{function (sum :photos-on-iphone)}}
+  + Sum of all remaining photos on iPhone: {{function (sum :photos-on-iphone)}}
 Average time to process per photo: {{function (average (map (fn [x](/ (:time-to-process x)(:number-of-photos x))) result))}} 
 Average pictures taken per month: {{function (average :number-of-photos)}}

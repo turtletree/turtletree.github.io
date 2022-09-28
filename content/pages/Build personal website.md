@@ -22,30 +22,20 @@ lastMod: 2022-09-28
 ---
 
 
-## Action Items
+## Use Hugo
 
 Quick steps to publish #logseq pages
 
-TODO Clone [logseq-schrodinger-template](https://github.com/turtletree/test-publish-logseq) and put it under main domain `turtletree.github.io`
-
-TODO Replace content with my own exported, unzipped content
-
-TODO Update config.yml with personal info
-
 More features
 
-TODO Add logseq-publish Action for automated CI
-
-TODO Add Graph in main menu, reference the example of [brian sunter](https://briansunter.com/)
-
-TODO Add multi language selector
-
-TODO Able to switch themes
+  + Check all Logseq Format make sure it works
 
 Other actions
 
-Document what exactly I did
+  + Document what exactly I did
 
-Send PR for README to above resources
+  + Send PR for README to above resources
 
 
+
+## Use Logseq
