@@ -46,3 +46,7 @@ menu:
           name: Archive
           url: /archives/
           weight: 20
+        - identifier: notes
+          name: Notes
+          url: /logseq-public
+          weight: 20
