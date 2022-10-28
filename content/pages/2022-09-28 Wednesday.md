@@ -4,7 +4,7 @@ tags:
 - random
 title: 2022-09-28 Wednesday
 categories:
-lastMod: 2022-10-04
+lastMod: 2022-09-28
 ---
 It's a nice day and we walked to Porter together in order to get my Lab work done.
 

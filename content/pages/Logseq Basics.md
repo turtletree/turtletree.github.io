@@ -4,18 +4,36 @@ tags:
 - logseq
 title: Logseq Basics
 categories:
-lastMod: 2022-10-04
+lastMod: 2022-10-27
 ---
 TODO When we have enough shortcuts, we should move them from the 9/9 page to here
 
-### 3 # title
+# Play with Admonitions Triggered by <>
 
-## 2 # title
+{{< logseq/orgQUOTE >}}This is a quote
+{{< / logseq/orgQUOTE >}}
 
-# 1 # title
+``` 
+This is a source
+```
 
+{{< logseq/orgNOTE >}}This is a note
+{{< / logseq/orgNOTE >}}
 
+{{< logseq/orgTIP >}}This is a tip
+{{< / logseq/orgTIP >}}
 
-Functional queries
+{{< logseq/orgIMPORTANT >}}This is important
+{{< / logseq/orgIMPORTANT >}}
 
-  + {{query (property tags flight)}}
+{{< logseq/orgCAUTION >}}This is caution
+{{< / logseq/orgCAUTION >}}
+
+{{< logseq/orgPINNED >}}This is pinned
+{{< / logseq/orgPINNED >}}
+
+{{< logseq/orgWARNING >}}This is warning
+{{< / logseq/orgWARNING >}}
+
+{{< logseq/orgEXAMPLE >}}This is an example, looks very similar to just ``
+{{< / logseq/orgEXAMPLE >}}
