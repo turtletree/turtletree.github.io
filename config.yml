@@ -15,7 +15,7 @@ params:
         - name: "github"
           url: "https://github.com/turtletree"
         - name: "youtube"
-          url: "https://www.youtube.com/"
+          url: "https://youtube.com/playlist?list=PLQUArgUTY0Z4CmC-uhl_rBFnImz-C6zG6"
         - name: "instagram"
           url: "https://www.instagram.com/vickieonthetree"
         #- name: "twitter"
