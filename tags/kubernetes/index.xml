@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>kubernetes on Vickie's Digital Garden</title><link>https://turtletree.github.io/tags/kubernetes/</link><description>Recent content in kubernetes on Vickie's Digital Garden</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://turtletree.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>kubernetes/service</title><link>https://turtletree.github.io/pages/kubernetes/service/</link><pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/service/</guid><description>NodePort
+Range: 30000 - 32767 ClusterIP
+LoadBalancer
+apiVersion: v1
+kind: Service
+metadata:
+name: myapp-service spec:
+type: NodePort/ClusterIP (default)
+ports:
+-targetPort: 80 &amp;mdash; if not specify, gonna be the same as port port: 80 &amp;mdash; only required field nodePort: 30008 &amp;mdash; any number in the valid range, if not specify, it&amp;rsquo;s going to be random selector:
+app: myapp
+type: front-end
+k create -f service-def.yaml
+Access with curl http://192.168.1.2:30008</description></item><item><title>kubernetes/taint</title><link>https://turtletree.github.io/pages/kubernetes/taint/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/taint/</guid><description>Taint -&amp;gt; Node
+Tolerant -&amp;gt; Pod
+Defines if we are allowed to place a certain pod to a certain node
+It tells the NODE if he should accept a pod, it doesn&amp;rsquo;t not guarantee that typed of pods will definitely end up in this node
+Taint a Node k taint nodes node-name key-value:taint-effect
+taint-effect defines what happens to the PODs that DO NOT TOLERATE this taint
+NoSchedule: won&amp;rsquo;t place this pod on this node</description></item><item><title>kubernetes/pod</title><link>https://turtletree.github.io/pages/kubernetes/pod/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/pod/</guid><description>apiVersion: v1,
+kind: Pod/ReplicaSet/Deployment/Service
+metadata &amp;ndash; it&amp;rsquo;s a dictionary
+name: myapp-pod
+labels: &amp;ndash; any kinda of k-v pairs where you see fit
+app: myapp spec: &amp;ndash; additional information about this obj, what&amp;rsquo;s inside this obj
+securityContext:
+runAsUser: 1000 &amp;ndash; userId to run the pod serviceAccountName: dashboard-sa
+containers: &amp;ndash; list
+name: nginx-container image: nginx ports: -containerPort: 8080
+envFrom:
+secretRef: name: mysecret securityContext: &amp;ndash; specify under container instead of pod
+runAsUser: 1000</description></item><item><title>kubernetes/secret</title><link>https://turtletree.github.io/pages/kubernetes/secret/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/secret/</guid><description>k create secret generic \ mysecret --from-literal=DB_Host=mysql --from-literal=DB_User=root --from-literal=DB_Password=password k create secret generic \ mysecret --from-file=mysecret.properties k get secret mysecret -o yaml will show the hashed values
+secret-data.yaml apiVersion: v1
+kind: Secret
+metadata &amp;ndash; it&amp;rsquo;s a dictionary
+name: app-secret
+labels: &amp;ndash; any kinda of k-v pairs where you see fit
+app: myapp data &amp;ndash; similar to ConfigMaps
+DB_Host: mysql -&amp;gt; encoding with echo -n 'mysql' | base64
+DB_User:
+DB_Password:
+Inject to a kubernetes/pod apiVersion: v1,</description></item><item><title>kubernetes/serviceaccount</title><link>https://turtletree.github.io/pages/kubernetes/serviceaccount/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/serviceaccount/</guid><description>k create serviceaccount dashboard-sa
+Upon creation, the SA generates a toke, then generates a Secret and stored the token in the Secret
+k describe secret dashboard-sa-token-kbbbm
+Each namespace has its own default sa
+k exec -it my-kubernetes-dashboard ls /var/run/serets/kubernetes.io/serviceaccount
+k exec -it my-kubernetes-dashboard cat /var/run/serets/kubernetes.io/serviceaccount/token to view the token eyJ&amp;hellip;
+decode the above token jq -R 'split(&amp;quot;.&amp;quot;) | select(length &amp;gt; 0) | .[0],.[1] | @base64 | fromjson' &amp;lt;&amp;lt;&amp;lt; eyJ...</description></item><item><title>kubernetes</title><link>https://turtletree.github.io/pages/kubernetes/</link><pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate><guid>https://turtletree.github.io/pages/kubernetes/</guid><description>Component Structures Cluster
+Node
+Pod: single instance of an application
+Container Pod2:
+Container More pods to scale up
+Node2
+Pod: can have multiple containers but mostly different types, share same storage, fate, etc. But it is a RARE situation.
+Container A
+Container helper
+Kubectl Cheat Sheet k run nginx --image nginx --n devNamespace (downloaded from Docker hub, public registry)
+kubectl run nginx --image=nginx --dry-run=client -o yaml
+k get pods list all pods available in the current namespace</description></item></channel></rss>
